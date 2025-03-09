@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 
-data = pd.read_csv('data_cleaned.csv')
+data = pd.read_csv('/data_cleaned.csv')
 
 
 def show_metrics():
