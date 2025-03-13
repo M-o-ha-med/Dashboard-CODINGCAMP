@@ -153,12 +153,12 @@ show_line_chart()
 st.header('Korelasi antara data polutan dengan data lain ')
 show_heatmap()
 
-st.header('Analisa Lanjutan : Hasil Klustering dari tingkatan polutan')
+st.header('Analisa Lanjutan : Klusterisasi data polusi di guanyuan menggunakan teknik binning')
 
-st.subheader('Jumlah kasus')
+st.subheader('Distribusi polutan berdasarkan kategori')
 show_barcharts()
 
-st.subheader('Persentase Berdasarkan kategori')
+st.subheader('Persentase kasus Berdasarkan kategori')
 show_pie_chart(pollutant)
 
     
