@@ -158,7 +158,7 @@ st.header('Analisa Lanjutan : Klusterisasi data polusi di guanyuan menggunakan t
 st.subheader('Distribusi polutan berdasarkan kategori')
 show_barcharts()
 
-st.subheader('Persentase kasus Berdasarkan kategori')
+st.subheader('Persentase kasus Berdasarkan kategori dari polutan')
 show_pie_chart(pollutant)
 
     
