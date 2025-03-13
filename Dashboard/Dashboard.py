@@ -153,8 +153,6 @@ show_line_chart()
 st.header('Korelasi antara data polutan dengan data lain ')
 show_heatmap()
 
-st.header('')
-
 st.header('Analisa Lanjutan : Hasil Klustering dari tingkatan polutan')
 
 st.subheader('Jumlah kasus')
