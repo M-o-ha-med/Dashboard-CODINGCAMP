@@ -164,43 +164,30 @@ show_pie_chart(pollutant)
     
 
 
+st.markdown(''' 
+### Insight:
+- Penggunaan teknik clustering (binning) bertujuan untuk memetakan data polusi yang ada di dalam kota guanyuang untuk melihat apakah tingkat polusi yang ada di kota tersebut sesuai dengan standar yang ditetapkan oleh World Health Organization atau tidak.
 
-col1 , col2 = st.columns([1,2])
+- Dari hasil analisa yang dilakukan, polutan dengan kasus polusi berkonsentrasi **Rendah** terbanyak adalah polutan SO2 dengan jumlah kasus pada kategori **Rendah** sebesar 32,002 kasus , dan polutan dengan kasus polusi berkonsentrasi **Rendah** terendah adalah polutan PM10 dengan jumlah kasus  sebanyak 10,848 kasus.
+
+- polutan dengan kasus polusi berkonsentrasi **Menengah** terbanyak adalah polutan NO2 dengan jumlah kasus pada kategori **Menengah** sebesar 13,531 kasus , dan polutan dengan kasus polusi berkonsentrasi **Menengah** terendah adalah polutan SO2 dengan jumlah kasus sebanyak  3,062 kasus.
+
+- polutan dengan kasus polusi berkonsentrasi **Tinggi** terbanyak adalah polutan PM10 dengan jumlah kasus pada kategori **Tinggi** sebesar 6,895 kasus , dan polutan dengan kasus polusi berkonsentrasi **Tinggi**terendah adalah polutan SO2 dengan jumlah kasus sebanyak 0 kasus.
+
+- polutan dengan kasus polusi berkonsentrasi **Ekstrim** terbanyak adalah polutan SO2 dengan jumlah kasus pada kategori **Ekstrim** sebesar 28,477 kasus , dan polutan dengan kasus polusi berkonsentrasi **Ekstrim** terendah adalah polutan SO2, NO2 , dan O3 dengan jumlah kasus sebanyak 0 kasus.
+
+- polutan dengan kasus polusi berkonsentrasi **Sangat tinggi** terbanyak adalah polutan CO dengan jumlah kasus pada kategori **Sangat tinggi** sebesar 6,066 kasus , dan polutan dengan kasus polusi berkonsentrasi **Sangat tinggi** terendah adalah polutan SO2 dengan jumlah kasus sebanyak 0 kasus.
+ ''')
 
 
-with col1 :
-    st.markdown(
+st.markdown(
     '''
     ###  Conclusion
 
-    - Polusi udara tetap tinggi sepanjang tahun, terutama untuk PM10 dan PM2.5.
-
-    - CO memiliki tren berbeda, dengan lonjakan signifikan di akhir tahun.
-
-    - Polusi bulanan menunjukkan pola musiman, kemungkinan dipengaruhi oleh cuaca atau aktivitas manusia.
-
-    - Sebagian besar polutan berada dalam kategori rendah-menengah, kecuali CO, yang dominan dalam kategori ekstrem.
-
-    - Polutan partikulat (PM2.5 dan PM10) tetap menjadi ancaman utama, dengan distribusi yang luas.
-
-    - CO menunjukkan tren yang berbeda, dengan rentang nilai yang jauh lebih besar, menunjukkan potensi sumber pencemaran yang berbeda atau lebih intens.
-    '''
-    )
-
-
-with col2:
+    - Tren polusi dari tahun 2013 sampai 2017 cenderung naik turun, dimana dari visualisasi yang telah dibuat diperlihatkan bahwa pada tahun 2013-2014 konsentrasi rata-rata polutan seperti PM10 , PM2.5 , NO2 , dan O3 mengalami sedikit peningkatan sebanyak 4.85% untuk PM10 , 5.67% untuk PM2.5 , 9.12% , 0.86% sedangkan polutan SO2 mengalami penurunan sebanyak 2,32%. Pada tahun 2014-2015 konsentrasi polutan mengalami sedikit penurunan dan pada tahun 2016-2017 terdapat kenaikan dari konsentrasi dari setiap polutan walau tidak secara signifikan.
     
-    st.markdown(''' 
-    ### Insight:
-    - Visualisasi dari data polutan untuk tren dari polusi di kota guangyuang digambarkan menggunakan clustered bar chart agar dapat melihat distribusi dari besaran konsentrasi dari berbagai polutan secara jelas dan mudah untuk dibandingkan satu sama lain, namun ada pengecualian untuk polutan CO (karbon monoksida) dikarenakan polutan tersebut diukur dengan satuan yang berbeda serta untuk menghindari kejomplangan dalam visualisasi data saat menggunakan plot.
-
-    - Nilai yang digunakan untuk memplot clustered bar chart adalah mean dari konsentrasi polutan per tahun.
-
-    - Visualisasi dari data polutan untuk tren dari polusi di kota guangyuang digambarkan menggunakan line chart agar dapat melihat naik turunnya besaran konsentrasi dari berbagai polutan secara jelas dan mudah untuk dibandingkan satu sama lain, namun ada pengecualian untuk polutan CO (karbon monoksida) dikarenakan polutan tersebut diukur dengan satuan yang berbeda serta untuk menghindari kejomplangan dalam visualisasi data saat menggunakan plot.
-
-    - Nilai yang digunakan untuk memplot line chart adalah mean dari besaran konsentrasi polutan satu bulan dari rentang 2013 - 2017.
-
-
- ''')
- 
- 
+    - Polutan yang mengalami peningkatan konsentrasi dalam 12 bulan terakhir di rentang tahun 2013-2017 adalah polutan seperti seperti PM10 , PM2.5 , NO2 , dan O3 berdasarkan data dari tahun 2013-2014 sedangkan polutan seperti SO2 mengalami penurunan.
+    
+    - korelasi antara polutan dan variabel lain cenderung memiliki korelasi yang rendah , dilihat dari heatmap bahwa hanya polutan O3 saja yang memiliki korelasi yang tinggi dengan variabel lain apabila dibandingkan dengan polutan lainnya. variabel TEMP , DEWP , WSPM  merupakan variabel yang memiliki korelasi yang cukup baik dengan polutan O3. Dari heatmap dapat dilihat bahwa justru polutan memiliki korelasi yang cenderung tinggi antar satu sama lain sehingga didapat kesimpulan bahwa  setiap polutan memiliki cukup pengaruh terhadap polutan lainnya.
+    '''
+)
