@@ -191,3 +191,11 @@ st.markdown(
     1. korelasi antara polutan dan variabel lain cenderung memiliki korelasi yang rendah , dilihat dari heatmap bahwa hanya polutan O3 saja yang memiliki korelasi yang tinggi dengan variabel lain apabila dibandingkan dengan polutan lainnya. variabel TEMP , DEWP , WSPM  merupakan variabel yang memiliki korelasi yang cukup baik dengan polutan O3. Dari heatmap dapat dilihat bahwa justru polutan memiliki korelasi yang cenderung tinggi antar satu sama lain sehingga didapat kesimpulan bahwa  setiap polutan memiliki cukup pengaruh terhadap polutan lainnya.
     '''
 )
+
+st.markdown(
+    '''
+    ## Saran:
+    Saran yang dapat diberikan adalah dengan mendorong penggunaan tenaga terbaharukan, mendorong penggunaan transportasi umum, menggunakan metode pengolahan limbah yang ramah lingkungan serta meningkatkan kesadaran masyarakat akan bahaya dari polusi berlebih dan memberikan edukasi kepada masyarakat untuk terus melestarikan lingkungan. Penerapan regulasi terkait emisi kendaran juga perlu diperkuat agar dapat mengurangi polusi.
+
+    '''
+)
