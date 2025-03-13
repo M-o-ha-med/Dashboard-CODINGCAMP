@@ -11,7 +11,7 @@ def show_metrics():
     col1,col2 = st.columns(2)
     
     with col1:
-        st.metric(label="Total Sampel", value=data['No'].count())
+        st.metric(label="Total Sampel", value=f'{data['No'].count():,}')
     with col2:
         st.metric(label="Kota ", value=data['station'][0])
 
