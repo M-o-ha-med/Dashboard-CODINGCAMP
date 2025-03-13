@@ -95,8 +95,6 @@ def show_pie_chart(pollutant="PM2.5"):
     # Buat pie chart
     ax.pie( pollutant_counts, labels= pollutant_counts.index, autopct='%1.1f%%', startangle=140, colors=selected_colors)
 
-
-
     # Tambahkan judul
     ax.set_title(f'Distribusi dari {pollutant}')
 
@@ -104,7 +102,22 @@ def show_pie_chart(pollutant="PM2.5"):
     st.pyplot(fig)
 
 
-
+def show_barcharts():
+    fig , axes = plt.subplots(2,3, figsize=(15,10))
+    sns.countplot(data=data, x='PM2.5_binned', ax=axes[0, 0])
+    sns.countplot(data=data, x='PM10_binned', ax=axes[0, 1])
+    sns.countplot(data=data, x='SO2_binned', ax=axes[0, 2])
+    sns.countplot(data=data, x='O3_binned', ax=axes[1, 0])
+    sns.countplot(data=data, x='NO2_binned', ax=axes[1, 1])
+    sns.countplot(data=data, x='CO_binned', ax=axes[1, 2])
+    for column in axes:
+      for row in column:
+        row.set_ylabel('Jumlah kasus')
+        row.set_ylim(0, data['SO2_binned'].count() * 1.1)
+    
+    fig.suptitle('Distribusi dari polutan berdasarkan kategori')
+    plt.tight_layout()
+    st.pyplot(fig)
 
 st.title('Guangyuang Air Quality  Analysis')
 
@@ -137,16 +150,19 @@ show_clustered_barchart(start,end)
 st.header('Tren dari konsentrasi polutan dari tahun 2013 - 2017 berdasarkan bulan')
 show_line_chart()
 
-
-
-
-
 st.header('Korelasi antara data polutan dengan data lain ')
 show_heatmap()
 
-st.header('Klasifikasi tingkatan polutan')
+st.header('')
 
+st.header('Analisa Lanjutan : Hasil Klustering dari tingkatan polutan')
+
+st.subheader('Jumlah kasus')
+show_barcharts()
+
+st.subheader('Persentase Berdasarkan kategori')
 show_pie_chart(pollutant)
+
     
 
 
