@@ -104,12 +104,12 @@ def show_pie_chart(pollutant="PM2.5"):
 
 def show_barcharts():
     fig , axes = plt.subplots(2,3, figsize=(15,10))
-    sns.countplot(data=data, x='PM2.5_binned', ax=axes[0, 0])
-    sns.countplot(data=data, x='PM10_binned', ax=axes[0, 1])
-    sns.countplot(data=data, x='SO2_binned', ax=axes[0, 2])
-    sns.countplot(data=data, x='O3_binned', ax=axes[1, 0])
-    sns.countplot(data=data, x='NO2_binned', ax=axes[1, 1])
-    sns.countplot(data=data, x='CO_binned', ax=axes[1, 2])
+    sns.countplot(data=data, x='PM2.5_binned', ax=axes[0, 0] , order=['Rendah', 'Menengah', 'Tinggi', 'Sangat Tinggi', 'Ekstrim'])
+    sns.countplot(data=data, x='PM10_binned', ax=axes[0, 1], order=['Rendah', 'Menengah', 'Tinggi', 'Sangat Tinggi', 'Ekstrim'])
+    sns.countplot(data=data, x='SO2_binned', ax=axes[0, 2], order=['Rendah', 'Menengah', 'Tinggi', 'Sangat Tinggi', 'Ekstrim'])
+    sns.countplot(data=data, x='O3_binned', ax=axes[1, 0], order=['Rendah', 'Menengah', 'Tinggi', 'Sangat Tinggi', 'Ekstrim'])
+    sns.countplot(data=data, x='NO2_binned', ax=axes[1, 1], order=['Rendah', 'Menengah', 'Tinggi', 'Sangat Tinggi', 'Ekstrim'])
+    sns.countplot(data=data, x='CO_binned', ax=axes[1, 2], order=['Rendah', 'Menengah', 'Tinggi', 'Sangat Tinggi', 'Ekstrim'])
     for column in axes:
       for row in column:
         row.set_ylabel('Jumlah kasus')
